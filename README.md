@@ -54,8 +54,8 @@ Considerando congiuntamente i due parametri, si conclude che il punto di lavoro 
 -
 **CASI di 2 e 5 agenti**
 <p align="center">
-  <img src="img/multi_agent_exploration_2_agents.gif" width="45%">
-  <img src="img/multi_agent_exploration_5_agents.gif" width="45%">
+  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_2_agents.gif" width="45%">
+  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_5_agents.gif" width="45%">
 </p>
 
 **CASI di 10 e 20 agenti**
