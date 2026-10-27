@@ -33,7 +33,7 @@ Le funzioni di supporto alla pianificazione comprendono:
 
 **Test di Scalabilità**
 -
-La funzione run_joint_experiment permette di valutare le prestazioni del sistema al variare del numero di agenti $N \in \left{1,2,4,6,8,10,12,14,16,18,20\right}$. Ciascuna configurazione è stata eseguita per 3 repliche indipendenti per mitigare la varianza stocastica dell'algoritmo RRT.
+La funzione run_joint_experiment permette di valutare le prestazioni del sistema al variare del numero di agenti $N \in {1,2,4,6,8,10,12,14,16,18,20}$. Ciascuna configurazione è stata eseguita per 3 repliche indipendenti per mitigare la varianza stocastica dell'algoritmo RRT.
 Le metriche di valutazione adottate sono:
 - Iterazioni medie di completamento.
 - Distanza totale cumulativa media (somma complessiva della distanza percorsa da tutti gli agenti lungo l'intera simulazione).
