@@ -61,7 +61,7 @@ Considerando congiuntamente i due parametri, si conclude che il punto di lavoro 
 **CASI di 10 e 20 agenti**
 <p align="center">
   <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_10_agents.gif" width="45%">
-  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_20_agents.gif" width="45%">
+  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_20_2_agents.gif" width="45%">
 </p>
 
 Si può notare che il caso con 2 agenti ha bisogno di molte iterazioni, è in realtà caso simile al caso con 1 agente.
