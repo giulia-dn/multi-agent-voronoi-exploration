@@ -30,6 +30,14 @@ Le funzioni di supporto alla pianificazione comprendono:
 - planned_exploration: gestisce la pianificazione di movimento per singolo agente. Invoca find_goal e, se l'obiettivo è molto vicino, salta l'RRT validando il percorso tramite collision_check e muovendosi direttamente con move_to_goal. In caso contrario, utilizza l'algoritmo RRT (impostando una volta su dieci il goal come il punto di campionamento casuale, per guidare la crescita dell'albero verso il goal) l’algoritmo RRT è implementato usando le funzioni di supporto find_closest_node (trova il nodo dell’albero più vicino al punto campionato) e step_to_goal (calcola il nuovo nodo da aggiungere all’albero sul segmento nodo albero più vicino - punto campionato). Se l'RRT fallisce, il goal attivo viene azzerato.
 - run_simulation: coordina l'intera simulazione iterativa calcolando le celle di Voronoi, eseguendo la pianificazione per ciascun agente, estraendo le frontiere e chiamando la funzione che gestisce il rendering grafico della scena, render_scene.
 
+**Gestione dello stallo**
+-
+Durante la pianificazione con l'algoritmo RRT nella propria cella di Voronoi, possono verificarsi dei fallimenti (ad esempio per ostacoli complessi o frontiere non raggiungibili entro il limite di iterazioni). In questo caso:
+- Azzeramento del goal: il traguardo attivo dell'agente viene resettato.
+- Manovra di scampo: il robot esegue un piccolo spostamento casuale nello spazio libero vicino per sbloccarsi.
+- Dinamicità del sistema: poiché le celle di Voronoi vengono ricalcolate a ogni iterazione in base alle posizioni della flotta, la geometria cambia continuamente.
+Questo rende quasi impossibile uno stallo permanente della flotta; la mossa casuale serve solo come misura di sicurezza per i blocchi locali temporanei.
+
 
 **Test di Scalabilità**
 -
@@ -66,8 +74,8 @@ Considerando congiuntamente i due parametri, si conclude che il punto di lavoro 
 
 Il confronto visivo tra le simulazioni svolte con flotte di dimensioni differenti ci permette di notare diversi comportamenti:
 
-- Caso con 2 agenti: mostra prestazioni limitate, molto simili a quelle a singolo robot. Si può vedere che avendo suddivisioni dello spazio molto ampio causano il fatto che gli agenti debbano compiere percorsi lunghi per raggiungere le varie frontiere
-- Caso con 5 agenti: abbiamo un miglioramento dal punto di vista della copertura della mappa. Le celle sono di dimensioni minori, che agevolano percorsi più brevi
+- Caso con 2 agenti: mostra prestazioni limitate, molto simili a quelle a singolo robot. La suddivisione dello spazio in celle molto ampie costringe gli agenti a compiere percorsi lunghi per raggiungere le varie frontiere
+- Caso con 5 agenti: si osserva un netto miglioramento nella copertura della mappa. Le celle sono di dimensioni minori, agevolando percorsi più brevi e diretti.
 - Caso con 10 agenti: rappresenta l'assetto migliore nel nostro caso. Il sistema sfrutta il parallelismo dei robot senza generare colli di bottiglia o interferenze reciproche lungo passaggi stretti.
-- Caso con 20 agenti: possiamo notare una saturazione spaziale. Le celle di Voronoi diventano di dimensioni molto ridotte; questo causa che molti agenti si muovono poco e molti incorrono in fallimenti da parte di RRT a causa di ostacoli o bordi delle celle di Voronoi.
+- Caso con 20 agenti: possiamo notare una saturazione spaziale. Le celle di Voronoi diventano di dimensioni molto ridotte; ciò fa si che molti agenti si muovono poco e molti incorrono in fallimenti dell'algoritmo RRT a causa dei vincoli imposti dagli ostacoli e dai bordi delle celle stesse.
 
