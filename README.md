@@ -41,7 +41,7 @@ Le metriche di valutazione adottate sono:
 
 *Analisi dei Risultati*
 
-<img src="img/scalability_and_efficiency_analysis.png" width="800">
+<img src="scalability_and_efficiency_analysis.png" width="800">
 
 
 - Dal primo grafico (Scalabilità: Agenti vs Iterazioni): L'andamento mostra un decadimento non lineare (simile a una funzione esponenziale inversa) caratterizzato da un crollo verticale delle iterazioni passando da 1 a 4-6 agenti, per poi stabilizzarsi intorno ai 12-14 agenti. Ciò dimostra che l'incremento della flotta apporta benefici significativi grazie alla parallelizzazione, ma oltre la soglia dei 14 agenti la curva tende a un asintoto orizzontale. Ulteriori aggiunte di agenti oltre i 14, risultano superflue poiché la mappa risulta satura e i robot subiscono colli di bottiglia geometrici e interferenze reciproche.
