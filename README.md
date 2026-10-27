@@ -31,7 +31,6 @@ Le funzioni di supporto alla pianificazione comprendono:
 - run_simulation: coordina l'intera simulazione iterativa calcolando le celle di Voronoi, eseguendo la pianificazione per ciascun agente, estraendo le frontiere e chiamando la funzione che gestisce il rendering grafico della scena, render_scene.
 
 **Gestione dello stallo**
--
 Durante la pianificazione con l'algoritmo RRT nella propria cella di Voronoi, possono verificarsi dei fallimenti (ad esempio per ostacoli complessi o frontiere non raggiungibili entro il limite di iterazioni). In questo caso:
 - Azzeramento del goal: il traguardo attivo dell'agente viene resettato.
 - Manovra di scampo: il robot esegue un piccolo spostamento casuale nello spazio libero vicino per sbloccarsi.
@@ -60,6 +59,16 @@ Considerando congiuntamente i due parametri, si conclude che il punto di lavoro 
 
 **ESEMPI DI SIMULAZIONE**
 -
+**Legenda**
+- Spazio libero ed esplorato: bianco [255, 255, 255]
+- Ostacoli fissi: nero [0, 0, 0]
+- Mappa inesplorata: grigio [127, 127, 127]
+- Frontiere: magenta [255, 0, 255]
+- Agenti: punti blu con cerchio che indica raggio del sensore
+- Goal: punti rossi
+- Albero RRT: rami in verde, visualizzati durante la costruzione
+- Confini celle di Voronoi: linee in giallo, ricalcolate ad ogni iterazione
+
 **CASI di 2 e 5 agenti**
 <p align="center">
   <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_2_agents.gif" width="45%">
