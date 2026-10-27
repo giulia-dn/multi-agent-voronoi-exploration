@@ -64,7 +64,10 @@ Considerando congiuntamente i due parametri, si conclude che il punto di lavoro 
   <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_20_agents.gif" width="45%">
 </p>
 
-Si può notare che il caso con 2 agenti ha bisogno di molte iterazioni, è in realtà caso simile al caso con 1 agente.
-La simulazione con 5 agenti si ha una copertura più fluida della mappa.
-Si può notare come nel caso di 20 agenti la mappa sia satura di agenti che si muovono in spazi stretti e incorrono in colli di bottiglia geometrici. 
-Il caso con 10 agenti continua a mostrare invece, come nel caso con 5 agenti, un comportamento fluido e una buona copertura della mappa.
+Il confronto visivo tra le simulazioni svolte con flotte di dimensioni differenti ci permette di notare diversi comportamenti:
+
+- Caso con 2 agenti: mostra prestazioni limitate, molto simili a quelle a singolo robot. Si può vedere che avendo suddivisioni dello spazio molto ampio causano il fatto che gli agenti debbano compiere percorsi lunghi per raggiungere le varie frontiere
+- Caso con 5 agenti: abbiamo un miglioramento dal punto di vista della copertura della mappa. Le celle sono di dimensioni minori, che agevolano percorsi più brevi
+- Caso con 10 agenti: rappresenta l'assetto migliore nel nostro caso. Il sistema sfrutta il parallelismo dei robot senza generare colli di bottiglia o interferenze reciproche lungo passaggi stretti.
+- Caso con 20 agenti: possiamo notare una saturazione spaziale. Le celle di Voronoi diventano di dimensioni molto ridotte; questo causa che molti agenti si muovono poco e molti incorrono in fallimenti da parte di RRT a causa di ostacoli o bordi delle celle di Voronoi.
+
