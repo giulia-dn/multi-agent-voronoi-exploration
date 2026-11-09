@@ -87,25 +87,25 @@ Il punto di lavoro ottimale per la flotta, per entrambe le modalità, risulta es
 **CASO 2 agenti (caso normale e unlimited_rrt)**
 <p align="center">
   <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_2_agents.gif" width="45%">
-  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_2_agents_unlimited_rrt.gif" width="45%">
+  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_2_unlimited_rrt.gif" width="45%">
 </p>
 
 **CASO 5 agenti (caso normale e unlimited_rrt)**
 <p align="center">
   <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_5_agents.gif" width="45%">
-  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_5_agents_unlimited_rrt.gif" width="45%">
+  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_5_unlimited_rrt.gif" width="45%">
 </p>
 
 **CASO 10 agenti (caso normale e unlimited_rrt)**
 <p align="center">
   <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_10_agents.gif" width="45%">
-  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_10_agents_unlimited_rrt.gif" width="45%">
+  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_10_unlimited_rrt.gif" width="45%">
 </p>
 
 **CASO 20 agenti (caso normale e unlimited_rrt)**
 <p align="center">
   <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_20_agents.gif" width="45%">
-  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_20_agents_unlimited_rrt.gif" width="45%">
+  <img src="https://github.com/giulia-dn/multi-agent-voronoi-exploration/releases/download/v1.0/multi_agent_exploration_20_unlimited_rrt.gif" width="45%">
 </p>
 
 Il confronto visivo tra le simulazioni svolte con flotte di dimensioni differenti ci permette di notare diversi comportamenti:
